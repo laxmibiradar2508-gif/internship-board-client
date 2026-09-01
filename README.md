@@ -1,16 +1,35 @@
-# React + Vite
+# Internship Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack internship board where students can search, filter, and apply to internships.
 
-Currently, two official plugins are available:
+## Live Links
+- Frontend (live app): https://internship-board-client.vercel.app
+- Backend API: https://internship-board-server.onrender.com/api/internships
+- Backend repo: https://github.com/laxmibiradar2508-gif/internship-board-server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Search and filter internships by domain and work mode
+- Loading, empty, and error states with retry
+- Application form with client-side and server-side validation
+- Server rejects missing names, invalid emails, unsafe URLs, and duplicate applications
+- Rate limiting, secure headers (helmet), and CORS protection on the API
 
-## React Compiler
+## Tech Stack
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- Storage: JSON file-based data store
+- Testing: Vitest + Supertest
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup (local development)
 
-## Expanding the Oxlint configuration
+### Backend
+Navigate to the server folder, run npm install, then node index.js. Runs on http://localhost:4000
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Frontend
+Navigate to the client folder, run npm install, then npm run dev. Runs on http://localhost:5173
+
+### Environment variables
+See .env.example in each folder.
+
+### Running tests
+Navigate to the server folder and run npm test.
